@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html lang='pt-pt'>
 <head>
+
 <meta charset='UTF-8'>
 <title>Cartões</title>
 <style>
+
+#btn-topo {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s, color 0.3s;
+  z-index: 999;
+}
+#btn-topo.visivel {
+  opacity: 1;
+}
+#btn-topo:hover {
+  background-color: black;
+  color: white;
+}
   body { font-family: Arial, sans-serif; background: none; padding: 20px; }
   .grupo { margin-bottom: 40px; }
   .cartoes { display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start; }
@@ -88,11 +114,27 @@
   filter: grayscale(0%) !important;
   transform: scale(1.05) !important;
 }
+.grupo h2::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #ccc;
+  margin-bottom: 16px;
+  border-radius: 2px;
+}
+.fixo {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px 0;
+  z-index: 100;
+}
+
   .card:hover .hover-info { bottom: 0; }
 </style>
 </head>
 <body>
-<div class='grupo'><h2>e-Tutor(es)</h2><div class='cartoes'>
+<div class='grupo'><h1>e-Tutor(es)</h1><div class='cartoes'>
 <div class='card'>
 <img src='imagens/afonso.png' alt=''>
 <div class='name'></div>
@@ -100,104 +142,129 @@
 <div class='hover-info'><p>Formado na área da Hotelaria e Restauração, com certificação WSET nível 1 e 2, aliada a vários anos de experiência profissional como Barman em bares e restaurantes.</p></div>
 </div>
 </div></div>
-<div class='grupo'><h2>Preparadores</h2><div class='cartoes'>
+<div class='grupo'><h1 class="fixo">Preparadores</h1><div class='cartoes'>
+<div class='grupo'><h2>Centro Formativo de Lisboa</h2><div class='cartoes'>
 <div class='card'>
 <img src='imagens/anamagalhaes.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparadora - Ana Magalhães</strong></div>
-<div class='hover-info'><p>Preparadora de Inovação Educativa do Centro Formativo de Lisboa.<p></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Lisboa. <p></div>
 </div>
 <div class='card'>
 <img src='imagens/carlalmeida.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparadora - Carla Almeida</strong></div>
-<div class='hover-info'><p>Preparadora de Inovação Educativa do Centro Formativo de Lisboa.</p></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Lisboa.</p></div>
 </div>
 <div class='card'>
 <img src='imagens/feliciana.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparadora - Feliciana Morais</strong></div>
-<div class='hover-info'><p>Preparadora de Inovação Educativa do Centro Formativo de Lisboa.</div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Lisboa.</div>
 </div>
 <div class='card'>
 <img src='imagens/juliana.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparadora - Juliana Fernandes</strong></div>
-<div class='hover-info'><p>Preparadora de Inovação Educativa do Centro Formativo de Lisboa.</p></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Lisboa.</p></div>
 </div>
 <div class='card'>
 <img src='imagens/luisa.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparadora - Luísa Ladeira</strong></div>
-<div class='hover-info'><p>Preparadora de Inovação Educativa do Centro Formativo de Lisboa.</p></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Lisboa.</p></div>
 </div>
 <div class='card'>
 <img src='imagens/marianavieira.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparadora - Mariana Vieira</strong></div>
-<div class='hover-info'><p>Preparadora de Inovação Educativa do Centro Formativo de Lisboa.</p></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Lisboa.</p></div>
 </div>
 <div class='card'>
 <img src='imagens/nicole.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparadora - Nicole Correia</strong></div>
-<div class='hover-info'><p>Preparadora de Inovação Educativa do Centro Formativo de Lisboa.</p></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Lisboa.</p></div>
 </div>
 <div class='card'>
 <img src='imagens/susana.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparadora - Susana Inácio</strong></div>
-<div class='hover-info'><p>Preparadora de Inovação Educativa do Centro Formativo de Lisboa.</p></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Lisboa.</p></div>
 </div>
+</div>
+
+<div class='grupo'><h2 style="margin-top: 80px;">Centro Formativo do Porto</h2><div class='cartoes'>
 <div class='card'>
 <img src='imagens/sofiasilverio.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparadora - Sofia Silvério</strong></div>
-<div class='hover-info'><p>Preparadora de Inovação Educativa do Centro Formativo do Porto.</p></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Porto.</p></div>
 </div>
 <div class='card'>
-<img src='imagens/pedroferreira.png' alt=''>
+<img src='imagens/teresacorreia.png' alt=''>
 <div class='name'></div>
-<div class='title'><strong>Preparador - Pedro Ferreira</strong></div>
-<div class='hover-info'><p>Preparador Técnico do Centro Formativo de Braga.</p></div>
+<div class='title'><strong>Preparadora - Teresa Correia</strong></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Porto.</p></div>
 </div>
 <div class='card'>
-<img src='imagens/branco.png' alt=''>
+<img src='imagens/danielarajao.png' alt=''>
+<div class='name'></div>
+<div class='title'><strong>Preparadora - Daniela Rajão</strong></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Porto.</p></div>
+</div>
+</div>
+<div class='grupo'><h2 style="margin-top: 80px;">Centro Formativo de Coimbra</h2><div class='cartoes'>
+<div class='card'>
+<img src='imagens/branco_coimbra.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparador - Jorge Branco</strong></div>
 <div class='hover-info'><p>Preparador Técnico do Centro Formativo de Coimbra.</p></div>
 </div>
 <div class='card'>
-<img src='imagens/cipriano.png' alt=''>
+<img src='imagens/cipriano_coimbra.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparador - Paulo Cipriano</strong></div>
 <div class='hover-info'><p>Preparador Técnico do Centro Formativo de Coimbra.</p></div>
 </div>
 <div class='card'>
-<img src='imagens/filipapereira.png' alt=''>
+<img src='imagens/taniarodrigues.png' alt=''>
 <div class='name'></div>
-<div class='title'><strong>Preparador - Filipa Pereira</strong></div>
-<div class='hover-info'><p>Preparadora Técnica do Centro Formativo de Faro.</p></div>
+<div class='title'><strong>Preparadora - Tânia Rodrigues</strong></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Coimbra.</p></div>
 </div>
 <div class='card'>
-<img src='imagens/frederic.png' alt=''>
+<img src='imagens/marianapereira.png' alt=''>
 <div class='name'></div>
-<div class='title'><strong>Preparador - Frederic Fernandes</strong></div>
-<div class='hover-info'><p>Preparador Técnico do Centro Formativo de Faro.</p></div>
+<div class='title'><strong>Preparadora - Mariana Pereira</strong></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Coimbra.</p></div>
 </div>
+</div>
+<div class='grupo'><h2 style="margin-top: 80px;">Centro Formativo de Faro</h2><div class='cartoes'>
 <div class='card'>
-<img src='imagens/ines.png' alt=''>
+<img src='imagens/ines_faro.png' alt=''>
 <div class='name'></div>
 <div class='title'><strong>Preparadora - Inês Rodrigues</strong></div>
-<div class='hover-info'><p>Preparadora Técnica do Centro Formativo de Faro.</p></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Faro.</p></div>
 </div>
 <div class='card'>
-<img src='imagens/martins.png' alt=''>
+<img src='imagens/filipapereira_faro.png' alt=''>
 <div class='name'></div>
-<div class='title'><strong>Preparador - Nuno Martins</strong></div>
-<div class='hover-info'><p>Preparador Técnico do Centro Formativo de Faro.</p></div>
+<div class='title'><strong>Preparadora - Filipa Pereira</strong></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Faro.</p></div>
 </div>
 </div>
+<div class='grupo'><h2 style="margin-top: 80px;">Centro Formativo de Braga</h2><div class='cartoes'>
+<div class='card'>
+<img src='imagens/inesfernandes.png' alt=''>
+<div class='name'></div>
+<div class='title'><strong>Preparadora - Inês Fernandes</strong></div>
+<div class='hover-info'><p>Formadora de Desenvolvimento Pessoal e Profissional no Centro Formativo de Braga.</p></div>
+</div>
+</div>
+</div>
+</div>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".hover-info p").forEach(p => {
@@ -222,6 +289,16 @@
         }
       });
     });
+  });
+
+</script>
+<button id="btn-topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+  ↑ Topo</button>
+<script>
+  window.addEventListener("scroll", () => {
+    const botao = document.getElementById("btn-topo");
+    const fimDaPagina = window.innerHeight + window.scrollY >= document.body.offsetHeight - 10;
+    botao.classList.toggle("visivel", fimDaPagina);
   });
 </script>
 </body></html>
